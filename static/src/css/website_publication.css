@@ -1,0 +1,27 @@
+.publication-list {
+    list-style: none;
+    padding: 0;
+}
+
+.publication-item {
+    margin-bottom: 20px;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+.publication-title {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.publication-authors {
+    font-style: italic;
+    margin-bottom: 10px;
+}
+
+.publication-date {
+    color: #888;
+    margin-bottom: 10px;
+}

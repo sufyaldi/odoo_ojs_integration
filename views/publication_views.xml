@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <!-- Definisikan Form View -->
+    <record id="view_publication_module_form" model="ir.ui.view">
+        <field name="name">publication.module.form</field>
+        <field name="model">publication.module</field>
+        <field name="arch" type="xml">
+            <form string="Publication Module">
+                <sheet>
+                    <group>
+                        <field name="title"/>
+                        <field name="abstract"/>
+                        <field name="authors"/>
+                        <field name="publication_date"/>
+                        <field name="journal_url"/>
+                        <field name="author_photo" widget="image"/>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <!-- Definisikan Tree View -->
+    <record id="view_publication_module_tree" model="ir.ui.view">
+        <field name="name">publication.module.tree</field>
+        <field name="model">publication.module</field>
+        <field name="arch" type="xml">
+            <tree string="Publication Module">
+                <field name="title"/>
+                <field name="authors"/>
+                <field name="publication_date"/>
+            </tree>
+        </field>
+    </record>
+
+    <!-- Definisikan Action -->
+    <record id="action_publication_module" model="ir.actions.act_window">
+        <field name="name">Publication Modules</field>
+        <field name="res_model">publication.module</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+
+    <!-- Definisikan Menu Item -->
+    <menuitem id="menu_publication_module" name="Publications" sequence="1"/>
+    <menuitem id="submenu_publication_module" name="Publication Modules" parent="menu_publication_module" action="action_publication_module"/>
+</odoo>

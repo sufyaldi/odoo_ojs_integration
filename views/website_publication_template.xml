@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <template id="publication_template" name="Publications">
+        <t t-call="website.layout">
+            <div class="container">
+                <h1 class="my-4">Publications</h1>
+                <ul class="publication-list">
+                    <t t-foreach="publications" t-as="publication">
+                        <li class="publication-item">
+                            <h2 class="publication-title"><t t-esc="publication.title"/></h2>
+                            <p class="publication-authors"><strong>Authors:</strong> <t t-esc="publication.authors"/></p>
+                            <p class="publication-date"><strong>Publication Date:</strong> <t t-esc="publication.publication_date"/></p>
+                            <p class="publication-abstract"><t t-esc="publication.abstract"/></p>
+                        </li>
+                    </t>
+                </ul>
+            </div>
+        </t>
+    </template>
+</odoo>

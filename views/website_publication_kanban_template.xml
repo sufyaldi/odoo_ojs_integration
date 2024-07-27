@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <template id="publication_kanban_template" name="Publications Kanban">
+        <t t-call="website.layout">
+            <div class="container">
+                <h1 class="my-4">Publications</h1>
+                <div class="row">
+                    <t t-foreach="publications" t-as="publication">
+                        <div class="col-md-4">
+                            <div class="card mb-4 shadow-sm">
+                                <t t-if="publication.author_photo">
+                                    <img t-att-src="'data:image/png;base64,%s' % publication.author_photo" class="card-img-top"/>
+                                </t>
+                                <div class="card-body">
+                                    <h2 class="card-title"><t t-esc="publication.title"/></h2>
+                                    <p class="card-text"><strong>Authors:</strong> <t t-esc="publication.authors"/></p>
+                                    <p class="card-text"><strong>Publication Date:</strong> <t t-esc="publication.publication_date"/></p>
+                                    <p class="card-text"><t t-esc="publication.abstract"/></p>
+                                    <t t-if="publication.journal_url">
+                                        <p><a t-att-href="publication.journal_url" target="_blank">Read more</a></p>
+                                    </t>
+                                </div>
+                            </div>
+                        </div>
+                    </t>
+                </div>
+            </div>
+        </t>
+    </template>
+</odoo>
