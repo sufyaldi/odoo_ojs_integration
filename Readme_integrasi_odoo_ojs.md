@@ -1,4 +1,5 @@
 Integrasi Custom OJS
+
 Modul Odoo ini mengintegrasikan PKP OJS (Open Journal Systems) dengan Odoo dengan menerima dan menyimpan data publikasi. Modul ini juga menampilkan data publikasi di situs web Odoo dalam tampilan kanban dengan foto penulis yang diambil dari catatan karyawan.
 
 Fitur
